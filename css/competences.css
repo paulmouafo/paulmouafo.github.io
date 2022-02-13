@@ -1,0 +1,45 @@
+.competence-container
+{
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+.competences-icons
+{
+    width: 70px;
+}
+
+.competence
+{
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+
+}
+
+.competence
+{
+    background-color: #fff;
+    border: 2px solid #ff6624;
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    border-radius: 20px;
+    z-index: 1;
+}
+  .competence::after
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    opacity: .7; 
+    border-radius: 20px;
+    z-index: -1;
+}

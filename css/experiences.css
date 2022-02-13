@@ -1,0 +1,205 @@
+.experiences
+{   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.experiences .card
+{
+    position: relative;
+    width: 350px;
+    height: 450px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    box-shadow: 0 20px 50px rgb(0,0,0,0.2);
+    overflow: hidden;
+}
+
+.experiences:hover .card
+{
+    opacity: 0.2;
+}
+
+.experiences .card:hover
+{
+    opacity: 1;
+}
+
+.experiences .card::before
+{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    background: rgb(255,255,255,0.1);
+    pointer-events: none;
+}
+
+.experiences .card .content
+{
+    padding: 30px;
+    text-align: center;
+}
+
+.experiences .card .content h2
+{
+    position: relative;
+    right: 30px;
+    font-size: 4em;
+    font-weight: 800;
+    color: #ff6624;
+    z-index: 3;
+    opacity: 0.1;
+    transition: 0.5s;
+}
+
+.experiences .card:hover .content h2
+{
+    opacity: 1;
+    transform: translateY(-70px);
+}
+
+.experiences .card:hover .content h3
+{
+    position: relative;
+    font-size: 1.5em;
+    color: black;
+    z-index: 2;
+    opacity: 0.5;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+
+.experiences .card:hover .content p
+{
+    position: relative;
+    font-size: 1em;
+    color: black;
+    z-index: 2;
+    opacity: 0.5;
+    font-weight: 300;
+    transition: 0.5s;
+}
+.experiences .card:hover .content h3,
+.experiences .card:hover .content p
+{
+    opacity: 1;
+}
+
+.experiences .card .content a
+{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 15px;
+    background: rgb(192, 114, 114);
+    color: #0c002b;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.experiences .card .span
+{
+    transition: 0.5;
+    opacity: 0;
+}
+
+.experiences .card:hover .span
+{
+    opacity: 1;
+}
+
+.experiences .card .span:nth-child(1)
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #ff6624);
+    animation: animate1 2s linear infinite;
+}
+@keyframes animate1
+{
+    0%
+    {
+        transform: translateX(-100%);
+    }
+    100%
+    {
+        transform: translateX(100%);
+    }
+}
+
+.experiences .card .span:nth-child(2)
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #ff6624);
+    animation: animate2 2s linear infinite;
+    animation-delay: 1s;
+}
+@keyframes animate2
+{
+    0%
+    {
+        transform: translateY(-100%);
+    }
+    100%
+    {
+        transform: translateY(100%);
+    }
+}
+
+.experiences .card .span:nth-child(3)
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to left, transparent, #ff6624);
+    animation: animate3 2s linear infinite;
+}
+@keyframes animate3
+{
+    0%
+    {
+        transform: translateX(100%);
+    }
+    100%
+    {
+        transform: translateX(-100%);
+    }
+}
+
+.experiences .card .span:nth-child(4)
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to top, transparent, #ff6624);
+    animation: animate4 2s linear infinite;
+    animation-delay: 1s;
+}
+@keyframes animate4
+{
+    0%
+    {
+        transform: translateY(100%);
+    }
+    100%
+    {
+        transform: translateY(-100%);
+    }
+}
